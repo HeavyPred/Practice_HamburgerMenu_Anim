@@ -1,0 +1,41 @@
+@keyframes open-menubtn {
+	0% {transform: translateX(0);}
+	10% {transform: translateX(10px);}
+	90% {transform: translateX(-150px);}
+	100% {transform: translateX(-140px);}
+}
+
+@keyframes close-menubtn {
+	0% {transform: translateX(-140px);}
+	10% {transform: translateX(-150px);}
+	90% {transform: translateX(10px);}
+	100% {transform: translateX(0px);}
+}
+
+@keyframes clicked-btn-before {
+	0% {transform: scaleX(1);}
+	50% {transform: scaleX(0.5);}
+	100% {transform: rotate(45deg) scaleX(0.5); left: +15px; top: -8px;}
+}
+@keyframes clicked-btn-after {
+	0% {transform: scaleX(1);}
+	50% {transform: scaleX(0.5);}
+	100% {transform: rotate(-45deg) scaleX(0.5); left: +15px; top: +8px;}
+}
+@keyframes unclicked-btn-before {
+	0% {transform: rotate(45deg) scaleX(0.5); left: +15px; top: -8px;}
+	50% {transform: scaleX(0.5);}
+	100% {transform: scaleX(1);}
+}
+@keyframes unclicked-btn-after {
+	0% {transform: rotate(-45deg) scaleX(0.5); left: +15px; top: +8px;}
+	50% {transform: scaleX(0.5);}
+	100% {transform: scaleX(1);}
+}
+
+@keyframes close-menu {
+	0% {transform: translateX(-140px);}
+	10% {transform: translateX(-150px);}
+	90% {transform: translateX(+10px);}
+	100% {transform: translateX(0);}
+}

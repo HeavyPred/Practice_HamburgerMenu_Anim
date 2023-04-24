@@ -1,0 +1,210 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-y: visible;
+	overflow-x: hidden;
+
+	background-color: black;
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+
+	margin: auto;
+}
+
+#mainhead {
+	position: sticky;
+
+	top: 0;
+
+	width: 100%;
+	height: 60px;
+	overflow: hidden;
+
+	margin: 0;
+	padding: 10px 10px;
+
+	background-color: darkgrey;
+
+	box-shadow: 0px 3px 5px black;
+}
+#mainhead h1 {
+	margin: 0;
+	padding: 0;
+
+	color: blue;
+	text-decoration: underline;
+}
+
+#mainsect {
+	width: 100%;
+	margin: 0;
+	padding: 5px 10px;
+
+	background-color: grey;
+}
+#mainsect h2 {
+	color: darkblue;
+	text-decoration: underline;
+}
+#mainsect p {
+	text-align: justify;
+}
+
+/*MENU STYLES*/
+
+/*MENU BUTTON*/
+#menubtn {
+	position: fixed;
+	top: 0px;
+	right: -140px;
+
+	width: 200px;
+	height: 60px;
+
+	background-color: darkgrey;
+
+	cursor: pointer;
+}
+
+
+
+#bar {
+	position: relative;
+	top: 27.5px;
+	left: 5px;
+
+	content: "";
+
+	width: 50px;
+	height: 5px;
+	background-color: black;
+
+	border-radius: 10px;
+}
+#bar:before, #bar:after{
+	position: absolute;
+
+	content: "";
+
+	width: 100%;
+	height: 100%;
+
+	background-color: inherit;
+	border-radius: inherit;
+}
+#bar:before{
+	top: -15px;
+}
+#bar:after{
+	top: +15px;
+}
+.clickedbtn:before {
+	animation-name: clicked-btn-before;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out; 
+}
+.clickedbtn:after {
+	animation-name: clicked-btn-after;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out; 
+}
+.unclickedbtn:before {
+	animation-name: unclicked-btn-before;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out; 
+}
+.unclickedbtn:after {
+	animation-name: unclicked-btn-after;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out; 
+}
+
+.closedbtn {
+	animation-name: close-menubtn;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+
+	right: 0;
+}
+.openbtn {
+	animation-name: open-menubtn;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+
+	right: -140px;
+}
+
+/*THE MENU*/
+
+#menu {
+	position: relative;
+	top: 55px;
+	left: 140px;
+	
+
+	background-color: lightgrey;
+
+	box-shadow: 0px 5px 5px black;
+
+	z-index: 5;
+}
+.closed {
+	animation-name: close-menu;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+
+	left: 0px;
+}
+
+.opened {
+	animation-name: open-menubtn;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+
+	left: 140px;
+}
+
+#menu ul {
+	list-style: none;
+	text-indent: 0;
+
+	padding-left: 0;
+	margin: 0;
+}
+
+.menu-item {
+	display: flex;
+	height: 60px;
+	width: 200px;
+
+	align-items: center;
+	justify-content: center;
+
+	text-decoration: none;
+	color: blue;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: lightgrey;
+
+	border: 1px solid grey;
+
+	transition: filter 0.5s;
+}
+.menu-item:hover {
+	filter: brightness(50%);
+}
